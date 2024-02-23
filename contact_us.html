@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>KIS|Blog</title>
+<link rel="stylesheet" type="text/css" href="css/all.css" />
+<style>
+	#banner{
+		width:98%;
+		height:50px; 
+		float:left;
+		padding-left:1%;
+		padding-right:1%;
+		background-color:#000;
+		opacity:0.9;
+	}
+	#logo{
+		width:20%;
+		height:40px;
+		padding-top:5px;
+		padding-bottom:5px;
+		float:left;
+		border-radius:10px;
+		line-height:50px;
+	}
+	#logo-img{
+		border-radius:10px;
+		float:left;
+	}
+	#banner-title{
+		width:80%;
+		height:50px;
+		float:left;
+		line-height:50px;
+		font-size:24px;
+		font-family:"Arial Black", Gadget, sans-serif;
+		color:#FFF;
+	}
+	#navigation{
+		width:98%;
+		height:35px;
+		padding-left:1%;
+		padding-right:1%;
+		float:left;	
+		background-color:#666;
+	}
+	#menu-bar{
+		width:98%;
+		padding-left:1%;
+		padding-right:1%;
+		margin:0px;
+		float:left;	
+	}
+	.menus{
+		display:inline-block;
+		padding-left:1%;
+		padding-right:1%;
+		float:left;
+		height:35px;
+		line-height:35px;
+		list-style:none;	
+		color:#600;
+		font-weight:bolder;
+	}
+	.menus:hover{
+		background-color:#fefefe;
+		border-radius:10px 0px 10px 0px;
+		cursor:pointer;		
+	}
+	#FAQs{
+		float:right;	
+	}
+	#contact{
+		background-color:#fefefe;
+		border-radius:10px 0px 10px 0px;	
+	}
+	
+	#contents{
+		width:100%;
+		float:left;
+		min-height:500px;
+			
+	}
+	#first-welcome-note{
+		width:100%;
+		float:left;
+		height:170px;
+		background-color:#000;
+		background-image:url(img/welcome-img.jpg);
+		background-size:cover;	
+		background-repeat:no-repeat;
+	}
+	
+	#first-welcome-cnt{
+		width:100%;
+		height:170px;
+		background-color:black;
+		float:left;	
+		opacity:0.75;
+	}
+	#main-content-body{
+		width:98%;
+		padding:1%;
+		min-height:350px;
+		float:left;	
+	}
+	#left-content-with-img-slider{
+		width:50%;
+		border:1px solid #300;
+		float:left;
+		background-color:#ccc;
+		border-radius:25px;
+	}
+	
+	#right-content-with-side-form{
+		width:40%;
+		padding-left:4.5%;
+		padding-right:4.5%;
+		float:left;
+	}
+	.slider-img{
+		float:left;
+		width:50%;
+		min-height:350px;
+		background-size:contain;
+		background-repeat:no-repeat;
+		position:absolute;
+	}
+	.lab{
+		width:103px; 
+		float:left;	
+	}
+	.fields{
+		width:250px;
+		float:left;
+		height:35px;
+		border-radius:5px;
+		border:1px solid #666;	
+	}
+	.filed-pan{
+		width:100%;
+		float:left;
+		margin-bottom:2%;
+	}
+	#advert{
+		width:100%;
+		min-height:250px;
+		float:left;
+	}
+	#left-advert{
+		width:50%;
+		height:250px;
+		float:left;
+		margin-top:2%;
+	}
+	#right-advert{
+		width:40%;
+		min-height:250px;
+		padding-left:4.5%;
+		padding-right:4.5%;
+		float:left;
+		margin-top:2%;
+	}
+	#clients-comment{
+		width:100%;
+		min-height:200px;
+		float:left;
+		margin-top:2%;
+	}
+	.comments{
+		width:23.7%;
+		float:left;
+		min-height:200px;
+		margin-right:1%;	
+		border-radius:10px;
+		border:1px solid #888;
+	}
+	#our-service-glimpse{
+		width:100%;
+		min-height:200px;
+		float:left;
+		margin-top:2%;
+	}
+	.product-img{
+		width:23.7%;
+		float:left;
+		min-height:200px;
+		margin-right:1%;	
+		border-radius:10px;
+		border:1px solid #888;
+	}
+	.prd-img{
+		width:100%;
+		float:left;
+		height:200px;
+		margin-right:1%;	
+		border-radius:10px;
+		border:1px solid #888;
+	}
+	#first-prd-img-hover{
+		width:23.16%;
+		height:200px;
+		margin-right:1%;	
+		border-radius:10px;
+		border:1px solid #888;
+		position:absolute;
+		color:#fff;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+		font-weight:bolder;
+		font-size:0px;
+		text-align:center;
+	}
+	#first-prd-img-hover:hover{
+		cursor:pointer;
+		width:23.16%;
+		height:100px;
+		margin-right:1%;	
+		border-radius:10px;
+		border:1px solid #888;
+		background-color:#000;
+		position:absolute;
+		color:#fff;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+		font-size:24px;
+		font-weight:bolder;
+		text-align:center;
+		padding-bottom:50px;
+		padding-top:50px;
+		opacity:0.6;
+	}
+	#second-prd-img-hover{
+		width:23.16%;
+		height:200px;
+		margin-right:1%;	
+		border-radius:10px;
+		border:1px solid #888;
+		position:absolute;
+		color:#fff;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+		font-weight:bolder;
+		font-size:0px;
+		text-align:center;
+	}
+	#second-prd-img-hover:hover{
+		cursor:pointer;
+		width:23.16%;
+		height:100px;
+		margin-right:1%;	
+		border-radius:10px;
+		border:1px solid #888;
+		background-color:#000;
+		position:absolute;
+		color:#fff;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+		font-size:24px;
+		font-weight:bolder;
+		text-align:center;
+		padding-bottom:50px;
+		padding-top:50px;
+		opacity:0.6;
+	}
+	#third-prd-img-hover{
+		width:23.16%;
+		height:200px;
+		margin-right:1%;	
+		border-radius:10px;
+		border:1px solid #888;
+		position:absolute;
+		color:#fff;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+		font-weight:bolder;
+		font-size:0px;
+		text-align:center;
+	}
+	#third-prd-img-hover:hover{
+		cursor:pointer;
+		width:23.16%;
+		height:100px;
+		margin-right:1%;	
+		border-radius:10px;
+		border:1px solid #888;
+		background-color:#000;
+		position:absolute;
+		color:#fff;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+		font-size:24px;
+		font-weight:bolder;
+		text-align:center;
+		padding-bottom:50px;
+		padding-top:50px;
+		opacity:0.6;
+	}
+	#fourth-prd-img-hover{
+		width:23.16%;
+		height:200px;
+		margin-right:1%;	
+		border-radius:10px;
+		border:1px solid #888;
+		position:absolute;
+		color:#fff;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+		font-weight:bolder;
+		font-size:0px;
+		text-align:center;
+	}
+	#fourth-prd-img-hover:hover{
+		cursor:pointer;
+		width:23.16%;
+		height:100px;
+		margin-right:1%;	
+		border-radius:10px;
+		border:1px solid #888;
+		background-color:#000;
+		position:absolute;
+		color:#fff;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+		font-size:24px;
+		font-weight:bolder;
+		text-align:center;
+		padding-bottom:50px;
+		padding-top:50px;
+		opacity:0.6;
+	}
+	#upload{
+		width:100%;
+		float:left;
+		margin-top:5px;	
+	}
+	.clients-passport{
+		width:120px;
+		height:120px;
+		margin:auto;
+		border-radius:120px;
+		border:4px solid #003;
+		margin-top:2%;
+	}
+	.passport-img{
+		width:120px;
+		height:120px;
+		border-radius:120px;
+	}
+	#name{
+		width:100%;
+		float:left;
+		margin-top:5px;
+		padding:2%;
+		margin:auto;
+		color:#003;
+		font-family:"Comic Sans MS", cursive;
+		font-weight:bolder;
+		text-align:center;
+	}
+	#footer{
+		width:100%;
+		min-height:200px;
+		float:left;
+		margin-top:2%;
+		border-top:2px dashed #006;	
+	}
+	#footer-contents-panel{
+		background-color:#003; 
+		width:98%; 
+		padding-left:1%;
+		padding-right:1%;
+		float:left;
+		min-height:250px;
+	}
+	.footer-panel{
+		width:32.6%;
+		float:left;
+		background-color:#003;
+		min-height:250px;
+	}
+	#left-footer,#center-footer{
+		margin-right:1%;
+	}
+	.social-media:hover{
+		cursor:pointer;
+		color:gold;	
+	}
+	#footer-center-info{
+		cursor:pointer;
+		color:white;	
+	}
+	#footer-center-info:hover{
+		cursor:pointer;
+		color:gold;	
+	}
+	#news-subscribe-info{
+		cursor:pointer;
+		color:white;
+	}
+	#news-subscribe-info:hover{
+		cursor:pointer;
+		color:gold;
+	}
+	#head-office-icon{
+		font-size:24px;
+		color:#39C;
+		margin-right:6px;
+	}
+	#head-office-icon:hover{
+		color:#F30;
+		font-weight:bold;
+	}
+</style>
+</head>
+
+<body style="width:100%; float:left; margin:0px; padding:0px;">
+	<div id="wrapper" style="width:100%; float:left; height:680px;">
+    	<div id="banner">
+        	<div id="logo"><img id="logo-img" src="img/IMG-20200304-WA0005.jpg" width="20%" height="40" alt="Our Logo"/></div>
+            <div id="banner-title">WELCOME KINGSOFTNG ICT SOLUTIONS LIMITED, ENUGU.</div>
+        </div>
+        <div id="navigation">
+        	<ul id="menu-bar">
+            	<a href="index.html"><li class="menus" id="home">Home</li></a>
+            	<a href="about_us.html"><li class="menus" id="about">About us</li></a>
+            	<a href="#"><li class="menus" id="contact">Contact us</li></a>
+            	<a href="our_services.html"><li class="menus" id="services">Our services</li></a>
+            	<a href="#"><li class="menus" id="download">Downloads</li></a>
+            	<a href="join_us.html"><li class="menus" id="join-us">Join us now?</li></a>
+            	<a href="#"><li class="menus" id="FAQs">FAQs</li></a>
+            </ul>
+        </div> 
+    	<div id="contents">
+        	<div id="first-welcome-note">
+            	<div id="first-welcome-cnt">
+                	<div style="width:80%; margin-left:10%; margin-right:10%; line-height:50px; height:50px; border:2px solid #ccc; font-family:'Arial Black', Gadget, sans-serif; font-size:18px; font-weight:bolder; color:white; text-align:center; margin-top:1%;">KIS TECHNOLOGIES LTD. +2348065790623. info@kis-technologies.com.</div>
+                    <div style="color:white; padding-top:1%; padding-bottom:2%; padding-left:25%; padding-right:25%; float:left; width:50%; text-align:center;">KIS Technologies LTD. is a leading ICT and electronic development company that employs all round mordern technology-based innovation to serve her clients to their most anticipated satisfactions. In KIS-TECH, we are competent, we are diligent... feel free to contact us for any business problem(s) be it ICT, or Electronic related. You will surely get the best! 
+                    </div>
+                    <hr style="border:2px solid #000;"/>
+                </div>
+            
+            </div>
+            <div id="main-content-body">
+            	<div id="left-content-with-img-slider" style="background-color:transparent; margin-top:2%; border:none; min-height:250px; height:auto;">
+                 	<div style="width:80%; padding-left:10%; padding-right:10%; float:left; min-height:250px; text-align:justify;font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color:#006;">
+						<p><i class="fas fa-location-arrow" id="head-office-icon" title="Head Office"></i>Head Office: No.24, Monrovia Street, Wuse II, Abuja, Nigeria.</p>
+                        <p><i class="fas fa-location-arrow" id="head-office-icon" title="Branch Office"></i>Branch Office: No.12, Edinburgh Road, Ogui New Layout, Enugu state, Nigeria.</p>
+                        <p><i class="fas fa-envelope" id="head-office-icon"></i>Official email: agukingston@gmail.com</p>
+                        <p><i class="fas fa-phone-square-alt" id="head-office-icon"></i>Official Phone No: +2349019867020.</p>
+                        
+                    </div>
+                    <div id="map" style="border:1px solid #900; width:98%; min-height:350px; float:left;">
+                    	<iframe width='100%' height='350px%' id='mapcanvas' src='https://maps.google.com/maps?q=NO.12%20Edinburgh%20Rd,%20%20Enugu&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'><div class="zxos8_gm"></div><div style='overflow:hidden;'><div id='gmap_canvas' style='height:100%;width:100%;'></div></div><div></div></iframe>
+                    </div>
+            	</div>
+                <div id="right-content-with-side-form" style="margin-top:2%; border:1px solid #bcc; background-color:#bcc;">
+                	<div style="width:100%; float:left; min-height:300px; height:auto">
+                    	<div style="width:98%; padding:1%; margin-top:1%; min-height:50px; float:left; color:#fff; background-color:#066; text-align:left; margin-bottom:2%; border-radius:10px;">Feel free to contact us through the channel below. Kindly fill the requrired fields and type your contact message. And a professional will be in tauch with you shortly!</div>
+                        <div style="width:100%; float:left;">
+                        	<form name="contact-form" method="post" action="" enctype="multipart/form-data">
+                            	<label style="margin-top:2%;">Full Name** </label>
+                                <input type="text" name="contact-name" id="contact-name" required="required" placeholder="provide us with your full name please..." style="color:#c00; width:98%; border:1px solid #069; height:35px; margin-bottom:2%; border-radius:10px;"/>
+                                <label style="margin-top:2%;">Valid Email** </label>
+                                <input type="text" name="contact-email" id="contact-email" required="required" placeholder="provide us with your email address please..." style="color:#c00; width:98%; border:1px solid #069; height:35px; margin-bottom:2%; border-radius:10px;"/>
+                                <label style="margin-top:2%;">Type Your Message Below** </label>
+                                <textarea name="contact-name" id="contact-id" required="required" placeholder="provide us with your full name please..." style="color:#c00; width:98%; border:1px solid #069; height:200px; margin-bottom:2%; border-radius:10px;"></textarea>
+                                <div style="width:100%; float:left; text-align:center; margin-bottom:2%;">
+                                	<input type="submit" value="Send" style="padding:1%; background-color:#009; color:white; border-radius:10px;" title="click to send your inquiries"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="advert">
+                	<div id="left-advert" style="text-align:justify;">
+                    <img  src="img/Slider_images/IMG_20191025_131936.jpg" width="200" height="200" style="float:right; margin-left:2%; margin-right:2%;"/>
+                    	The automated smart garbage collection system
+The automated smart dustbin system’s hardware design involves level and human presence detection components, messaging components, visual display component, sound and light indication component, password control keypad, and the microcontroller. The components which are the ultrasonic sensor, GSM module, LCD, LEDs, buzzer and keypad systems are connected to the microcontroller. The microcontroller is the control unit identifying the levels of waste in the bin and sending SMS to the authorities in charge of disposal and location of the wastebasket if any of the input detection devices is triggered. When the wastebasket reaches certain calibrated level, the GSM module will send an SMS to waste management authorities to notify them of the bin’s level. At the same time, the LCD located upon the wastebasket will display the level of waste in the bin in terms of written notification and progress bar. If the bin is full, it will lock automatically and remain locked until the waste management authorities come for disposal and issue the unlocking password. 
+
+                    </div>
+                    <div id="right-advert">
+                    	<div style="width:100%; float:left; text-align:center; color:#06C;">To watch our Seminar live, Please play the video below!</div>
+                    	<div style="width:100%; float:left;">
+                        	<video width="100%" height="100%" controls="controls" src="videos/VID-20190310-WA0017 - Copy.mp4"></video>
+                        </div>
+                    </div>
+                </div>
+                <div id="our-service-glimpse">
+                	<div class="product-img">
+                    	<img  src="img/Top-5-Trends-In-Artificial-Intelligence-That-May-Dominate-2020.png" class="prd-img"/>
+                        <div id="first-prd-img-hover">Join Our <br />Artificial Intelligence<br />Training</div>
+                        <div id="upload"><span style="color:#09C; font-weight:bold; ">Uploaded</span> by:<a href="http://www.kis-technologies.com" style="text-decoration:none; font-family:'Comic Sans MS', cursive; font-size:12px; font-weight:bolder; color:#c00;"> KIS-TEAM </a>
+                    <script>document.write(String(new Date()).substr(0,16));</script><br />
+                    <div style="padding:2%; background-color:#aca; border-radius:20px; border:1px solid #300;float:left;width:80px; text-align:center; margin-left:30%; margin-right:30%;">Apply Now</div>
+                    </div>
+                    </div>
+                    
+                    <div class="product-img">
+                    	<img  src="img/electronics7.jpg" class="prd-img"/>
+                        <div id="second-prd-img-hover">Join Our <br />Electronic Design<br />Training</div>
+                        <div id="upload"><span style="color:#09C; font-weight:bold; ">Uploaded</span> by:<a href="http://www.kis-technologies.com" style="text-decoration:none; font-family:'Comic Sans MS', cursive; font-size:12px; font-weight:bolder; color:#c00;"> KIS-TEAM </a>
+                    <script>document.write(String(new Date()).substr(0,16));</script><br />
+                    <div style="padding:2%; background-color:#aca; border-radius:20px; border:1px solid #300;float:left;width:80px; text-align:center; margin-left:30%; margin-right:30%;">Apply Now</div>
+                    </div>
+                    </div>
+                    <div class="product-img">
+                    	<img  src="img/solar-roof.jpg" class="prd-img"/>
+                        <div id="third-prd-img-hover">Join Our <br />Solar Design<br />Training</div>
+                        <div id="upload"><span style="color:#09C; font-weight:bold; ">Uploaded</span> by:<a href="http://www.kis-technologies.com" style="text-decoration:none; font-family:'Comic Sans MS', cursive; font-size:12px; font-weight:bolder; color:#c00;"> KIS-TEAM </a>
+                    <script>document.write(String(new Date()).substr(0,16));</script><br />
+                    <div style="padding:2%; background-color:#aca; border-radius:20px; border:1px solid #300;float:left;width:80px; text-align:center; margin-left:30%; margin-right:30%;">Apply Now</div>
+                    </div>
+                    </div>
+                    <div class="product-img">
+                    	<img  src="img/images.jpg" class="prd-img"/>
+                        <div id="third-prd-img-hover">Join Our <br />Computer Programming<br />Training</div>
+                        <div id="upload"><span style="color:#09C; font-weight:bold; ">Uploaded</span> by:<a href="http://www.kis-technologies.com" style="text-decoration:none; font-family:'Comic Sans MS', cursive; font-size:12px; font-weight:bolder; color:#c00;"> KIS-TEAM </a>
+                    <script>document.write(String(new Date()).substr(0,16));</script><br />
+                    <div style="padding:2%; background-color:#aca; border-radius:20px; border:1px solid #300;float:left;width:80px; text-align:center; margin-left:30%; margin-right:30%;">Apply Now</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+            	<div style="" id="footer-contents-panel">
+                    <div class="footer-panel" id="left-footer">
+                    	<div style="width:100%; height:40px; float:left; text-align:center; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size:24px; font-weight:bolder; color:white; line-height:40px; border-bottom:1px solid white;">Join our social media
+                        </div>
+                        <div style="width:90%; padding-left:5%; padding-right:5%; float:left; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-weight:400; color:white;">
+                        	<ul style="list-style:none;">
+                            	<li class="social-media">Our Blogs</li>
+                                <li class="social-media">Facebook forum</li>
+                                <li class="social-media">Twitter </li>
+                                <li class="social-media">Pintrest </li>
+                                <li class="social-media">Instagram </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-panel" id="center-footer">
+                    	<div style="width:100%; height:40px; float:left; text-align:center; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size:24px; font-weight:bolder; color:white; line-height:40px; border-bottom:1px solid white;">Our Latest News Updates
+                        </div>
+                        <div id="footer-center-info" style="width:96%; padding-left:2%; padding-right:2%; padding-top:4%;font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; text-align:center; font-size:13px; float:left;">
+                        Dear valued customer, KIS-LTD. hereby inform you that her end of the year career training seminar will be holding on the 24th day of October, 2020. It may intrigue you to participate in the self empowering and entrepreneurship speeches which would be presented by engr. K.C Nwajideobi (CEO, KIS Technologies LTD.)
+                        </div>
+                    </div>
+                    <div class="footer-panel">
+                    	<div style="width:100%; height:40px; float:left; text-align:center; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size:24px; font-weight:bolder; color:white; line-height:40px; border-bottom:1px solid white;">Subscribe to our newsletter
+                        </div>
+                        <div style="width:98%; padding:2%; float:left;">
+                        	<div id="news-subscribe-info" style="width:100%; float:left; margin-bottom:2%;">To always receive our latest updates including our latest technology designs, please kindly subscribe to our newsletter by providing your valid email below. We promise to keep your acount confidential.
+                            </div>
+                            <div style="min-width:250px; width:99%; height:35px; border:1px thin #c00; border-radius:20px; float:left;" ><form method="post" action="" enctype="multipart/form-data" style="min-width:250px; width:99%; height:35px; border:1px thin #c00; border-radius:20px; float:left;"><input type="text" title="please enter your valid email address" style="min-width:250px; width:95%; padding-left:2%; padding-right:2%; color:#c00; font-weight:bolder; height:35px; border:1px solid #c00; border-radius:20px; float:left;" placeholder="...to subscribe, enter your email here!"/></form></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width:100%; float:left;height:30px; text-align:center; color:#c00;">&copy;Copyright&copy; <script>document.write(new Date().getFullYear()+ ",");</script> KIS-Technologies LTD. All rights reserved!</div>
+        </div>
+    </div>
+</body>
+</html>
